@@ -1,0 +1,93 @@
+{
+  "name": "lsl - physx",
+  "version": "0.1.0",
+  "description": "A physics engine with 3D rigid-body dynamics and collision detection (with impulse-based resolution)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/levilindsey/physx"
+  },
+  "author": {
+    "name": "Levi Lindsey",
+    "email": "levi@levi.codes",
+    "url": "https://github.com/levilindsey"
+  },
+  "bugs": {
+    "url": "http://github.com/levilindsey/physx/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "connect-livereload": "^0.6.0",
+    "dat.gui": "^0.7.2",
+    "del": "^3.0.0",
+    "gl-matrix": "^2.7.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-template": "^5.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^3.1.0",
+    "jscs": "^3.0.7",
+    "karma": "^2.0.4",
+    "karma-browserify": "^5.3.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "protractor": "^5.3.2",
+    "tiny-lr": "^1.1.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ]
+    ]
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "excludeFiles": [
+      ".idea",
+      ".git",
+      ".sass-cache",
+      "dist",
+      "docs",
+      "node_modules",
+      "res"
+    ],
+    "maximumLineLength": 100,
+    "requireMultiLineTernary": null
+  }
+}
