@@ -1,5 +1,5 @@
 {
-  "name": "lsl - physx",
+  "name": "lsl-physx",
   "version": "0.1.0",
   "description": "A physics engine with 3D rigid-body dynamics and collision detection (with impulse-based resolution)",
   "license": "MIT",
