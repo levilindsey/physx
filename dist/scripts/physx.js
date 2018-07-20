@@ -5,67 +5,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _animationJob = require('./src/animation-job');
+var _src = require('./src');
 
-Object.keys(_animationJob).forEach(function (key) {
+Object.keys(_src).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
-      return _animationJob[key];
+      return _src[key];
     }
   });
 });
 
-var _animator = require('./src/animator');
-
-Object.keys(_animator).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animator[key];
-    }
-  });
-});
-
-var _frameLatencyProfiler = require('./src/frame-latency-profiler');
-
-Object.keys(_frameLatencyProfiler).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _frameLatencyProfiler[key];
-    }
-  });
-});
-
-var _persistentAnimationJob = require('./src/persistent-animation-job');
-
-Object.keys(_persistentAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _persistentAnimationJob[key];
-    }
-  });
-});
-
-var _transientAnimationJob = require('./src/transient-animation-job');
-
-Object.keys(_transientAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _transientAnimationJob[key];
-    }
-  });
-});
-
-},{"./src/animation-job":2,"./src/animator":3,"./src/frame-latency-profiler":4,"./src/persistent-animation-job":5,"./src/transient-animation-job":6}],2:[function(require,module,exports){
+},{"./src":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -516,7 +468,7 @@ exports.animator = animator;
  * millisecond.
  */
 
-},{"./frame-latency-profiler":4,"./persistent-animation-job":5,"./transient-animation-job":6}],4:[function(require,module,exports){
+},{"./frame-latency-profiler":4,"./persistent-animation-job":6,"./transient-animation-job":7}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -619,6 +571,73 @@ exports.FrameLatencyProfiler = FrameLatencyProfiler;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _animationJob = require('./animation-job');
+
+Object.keys(_animationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animationJob[key];
+    }
+  });
+});
+
+var _animator = require('./animator');
+
+Object.keys(_animator).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animator[key];
+    }
+  });
+});
+
+var _frameLatencyProfiler = require('./frame-latency-profiler');
+
+Object.keys(_frameLatencyProfiler).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _frameLatencyProfiler[key];
+    }
+  });
+});
+
+var _persistentAnimationJob = require('./persistent-animation-job');
+
+Object.keys(_persistentAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _persistentAnimationJob[key];
+    }
+  });
+});
+
+var _transientAnimationJob = require('./transient-animation-job');
+
+Object.keys(_transientAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _transientAnimationJob[key];
+    }
+  });
+});
+
+},{"./animation-job":2,"./animator":3,"./frame-latency-profiler":4,"./persistent-animation-job":6,"./transient-animation-job":7}],6:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.PersistentAnimationJob = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -672,7 +691,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
 
 exports.PersistentAnimationJob = PersistentAnimationJob;
 
-},{"./animation-job":2}],6:[function(require,module,exports){
+},{"./animation-job":2}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -739,7 +758,7 @@ var TransientAnimationJob = function (_AnimationJob) {
 
 exports.TransientAnimationJob = TransientAnimationJob;
 
-},{"./animation-job":2,"./util":7}],7:[function(require,module,exports){
+},{"./animation-job":2,"./util":8}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -798,7 +817,7 @@ var _util = {
 
 exports._util = _util;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -877,7 +896,7 @@ Object.keys(_sphereCollidable).forEach(function (key) {
   });
 });
 
-},{"./src/aabb-collidable":9,"./src/capsule-collidable":10,"./src/collidable":11,"./src/line-segment":12,"./src/obb-collidable":13,"./src/sphere-collidable":14}],9:[function(require,module,exports){
+},{"./src/aabb-collidable":10,"./src/capsule-collidable":11,"./src/collidable":12,"./src/line-segment":13,"./src/obb-collidable":14,"./src/sphere-collidable":15}],10:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1239,7 +1258,7 @@ var _segment = new _lineSegment.LineSegment(vec3.create(), vec3.create());
 
 exports.Aabb = Aabb;
 
-},{"../../../util":38,"./collidable":11,"./line-segment":12}],10:[function(require,module,exports){
+},{"../../../util":39,"./collidable":12,"./line-segment":13}],11:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1363,7 +1382,7 @@ var Capsule = function (_Collidable) {
 
 exports.Capsule = Capsule;
 
-},{"./collidable":11,"./line-segment":12}],11:[function(require,module,exports){
+},{"./collidable":12,"./line-segment":13}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1479,7 +1498,7 @@ var Collidable = function () {
 
 exports.Collidable = Collidable;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1604,7 +1623,7 @@ var LineSegment = function () {
 
 exports.LineSegment = LineSegment;
 
-},{"../../../util":38}],13:[function(require,module,exports){
+},{"../../../util":39}],14:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1990,7 +2009,7 @@ exports.Obb = Obb;
  * @returns {boolean} If true, iteration will stop.
  */
 
-},{"./collidable":11,"./line-segment":12,"./sphere-collidable":14}],14:[function(require,module,exports){
+},{"./collidable":12,"./line-segment":13,"./sphere-collidable":15}],15:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2119,7 +2138,7 @@ var Sphere = function (_Collidable) {
 
 exports.Sphere = Sphere;
 
-},{"./collidable":11}],15:[function(require,module,exports){
+},{"./collidable":12}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2160,7 +2179,7 @@ exports.capsuleCollisionDetection = capsuleCollisionDetection;
 exports.obbCollisionDetection = obbCollisionDetection;
 exports.sphereCollisionDetection = sphereCollisionDetection;
 
-},{"./src/aabb-collision-detection":16,"./src/capsule-collision-detection":17,"./src/obb-collision-detection":18,"./src/sphere-collision-detection":19}],16:[function(require,module,exports){
+},{"./src/aabb-collision-detection":17,"./src/capsule-collision-detection":18,"./src/obb-collision-detection":19,"./src/sphere-collision-detection":20}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2250,7 +2269,7 @@ exports.aabbVsAabb = aabbVsAabb;
 exports.aabbVsObb = aabbVsObb;
 exports.aabbVsCapsule = aabbVsCapsule;
 
-},{"../../../util":38,"./capsule-collision-detection":17,"./obb-collision-detection":18,"./sphere-collision-detection":19}],17:[function(require,module,exports){
+},{"../../../util":39,"./capsule-collision-detection":18,"./obb-collision-detection":19,"./sphere-collision-detection":20}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2358,7 +2377,7 @@ exports.capsuleVsAabb = capsuleVsAabb;
 exports.capsuleVsObb = capsuleVsObb;
 exports.capsuleVsCapsule = capsuleVsCapsule;
 
-},{"../../../util":38,"./obb-collision-detection":18}],18:[function(require,module,exports){
+},{"../../../util":39,"./obb-collision-detection":19}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2533,7 +2552,7 @@ exports.obbVsAabb = obbVsAabb;
 exports.obbVsObb = obbVsObb;
 exports.obbVsCapsule = obbVsCapsule;
 
-},{"../../../util":38,"./aabb-collision-detection":16,"./capsule-collision-detection":17}],19:[function(require,module,exports){
+},{"../../../util":39,"./aabb-collision-detection":17,"./capsule-collision-detection":18}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2621,7 +2640,7 @@ exports.sphereVsAabb = sphereVsAabb;
 exports.sphereVsObb = sphereVsObb;
 exports.sphereVsCapsule = sphereVsCapsule;
 
-},{"../../../util":38,"./capsule-collision-detection":17,"./obb-collision-detection":18}],20:[function(require,module,exports){
+},{"../../../util":39,"./capsule-collision-detection":18,"./obb-collision-detection":19}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2662,7 +2681,7 @@ exports.capsuleContactCalculation = capsuleContactCalculation;
 exports.obbContactCalculation = obbContactCalculation;
 exports.sphereContactCalculation = sphereContactCalculation;
 
-},{"./src/aabb-contact-calculation":21,"./src/capsule-contact-calculation":22,"./src/obb-contact-calculation":23,"./src/sphere-contact-calculation":24}],21:[function(require,module,exports){
+},{"./src/aabb-contact-calculation":22,"./src/capsule-contact-calculation":23,"./src/obb-contact-calculation":24,"./src/sphere-contact-calculation":25}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2824,7 +2843,7 @@ exports.aabbVsObb = aabbVsObb;
 exports.aabbVsCapsule = aabbVsCapsule;
 exports.findAabbNormalFromContactPoint = findAabbNormalFromContactPoint;
 
-},{"../../../util":38,"../../collision-detection":15,"./capsule-contact-calculation":22,"./obb-contact-calculation":23,"./sphere-contact-calculation":24}],22:[function(require,module,exports){
+},{"../../../util":39,"../../collision-detection":16,"./capsule-contact-calculation":23,"./obb-contact-calculation":24,"./sphere-contact-calculation":25}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2976,7 +2995,7 @@ exports.capsuleVsAabb = capsuleVsAabb;
 exports.capsuleVsObb = capsuleVsObb;
 exports.capsuleVsCapsule = capsuleVsCapsule;
 
-},{"../../../util":38,"./obb-contact-calculation":23}],23:[function(require,module,exports){
+},{"../../../util":39,"./obb-contact-calculation":24}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3205,7 +3224,7 @@ exports.obbVsObb = obbVsObb;
 exports.obbVsCapsule = obbVsCapsule;
 exports.findObbNormalFromContactPoint = findObbNormalFromContactPoint;
 
-},{"../../../util":38,"../../collidables":8,"../../collision-detection":15,"./aabb-contact-calculation":21}],24:[function(require,module,exports){
+},{"../../../util":39,"../../collidables":9,"../../collision-detection":16,"./aabb-contact-calculation":22}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3313,7 +3332,7 @@ exports.sphereVsAabb = sphereVsAabb;
 exports.sphereVsObb = sphereVsObb;
 exports.sphereVsCapsule = sphereVsCapsule;
 
-},{"../../../util":38,"./aabb-contact-calculation":21,"./capsule-contact-calculation":22,"./obb-contact-calculation":23}],25:[function(require,module,exports){
+},{"../../../util":39,"./aabb-contact-calculation":22,"./capsule-contact-calculation":23,"./obb-contact-calculation":24}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3416,7 +3435,7 @@ Object.keys(_collisionUtils).forEach(function (key) {
   });
 });
 
-},{"./collidables":8,"./collision-detection":15,"./contact-calculation":20,"./src/collidable-factories":26,"./src/collidable-physics-job":27,"./src/collidable-store":28,"./src/collision-handler":29,"./src/collision-utils":30}],26:[function(require,module,exports){
+},{"./collidables":9,"./collision-detection":16,"./contact-calculation":21,"./src/collidable-factories":27,"./src/collidable-physics-job":28,"./src/collidable-store":29,"./src/collision-handler":30,"./src/collision-utils":31}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3574,7 +3593,7 @@ exports.createSphereOrCapsuleFromRenderableShape = createSphereOrCapsuleFromRend
  * of the capsule.
  */
 
-},{"../../util":38,"../collidables":8}],27:[function(require,module,exports){
+},{"../../util":39,"../collidables":9}],28:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3749,7 +3768,7 @@ exports.CollidablePhysicsJob = CollidablePhysicsJob;
  * @returns {boolean} True if this needs the standard collision restitution to proceed.
  */
 
-},{"../../src/physics-job":36,"../../util":38,"./collidable-factories":26,"./collidable-store":28}],28:[function(require,module,exports){
+},{"../../src/physics-job":37,"../../util":39,"./collidable-factories":27,"./collidable-store":29}],29:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3874,7 +3893,7 @@ exports.collidableStore = collidableStore;
  * @property {number} [time]
  */
 
-},{"./collision-utils":30}],29:[function(require,module,exports){
+},{"./collision-utils":31}],30:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4484,7 +4503,7 @@ exports.recordOldCollisionsForDevModeForAllCollidables = recordOldCollisionsForD
 exports.checkThatNoObjectsCollide = checkThatNoObjectsCollide;
 exports.getOtherControllerFromCollision = getOtherControllerFromCollision;
 
-},{"../../util":38,"./collidable-store":28,"./collision-utils":30}],30:[function(require,module,exports){
+},{"../../util":39,"./collidable-store":29,"./collision-utils":31}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4659,7 +4678,7 @@ exports.detectIntersection = detectIntersection;
 exports.calculateContact = calculateContact;
 exports.detectBoundingVolumeIntersection = detectBoundingVolumeIntersection;
 
-},{"../collidables":8,"../collision-detection":15,"../contact-calculation":20}],31:[function(require,module,exports){
+},{"../collidables":9,"../collision-detection":16,"../contact-calculation":21}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4738,7 +4757,7 @@ Object.keys(_physicsState).forEach(function (key) {
   });
 });
 
-},{"./collisions":25,"./integrator":32,"./src/physics-engine":35,"./src/physics-job":36,"./src/physics-state":37,"./util":38}],32:[function(require,module,exports){
+},{"./collisions":26,"./integrator":33,"./src/physics-engine":36,"./src/physics-job":37,"./src/physics-state":38,"./util":39}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4769,7 +4788,7 @@ Object.keys(_rk4Integrator).forEach(function (key) {
   });
 });
 
-},{"./src/integrator":33,"./src/rk4-integrator":34}],33:[function(require,module,exports){
+},{"./src/integrator":34,"./src/rk4-integrator":35}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4866,7 +4885,7 @@ exports.Integrator = Integrator;
  * @property {number} dt
  */
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -5096,7 +5115,7 @@ var rk4Integrator = new RK4Integrator();
 
 exports.rk4Integrator = rk4Integrator;
 
-},{"../../src/physics-state":37,"../../util":38,"./integrator":33}],35:[function(require,module,exports){
+},{"../../src/physics-state":38,"../../util":39,"./integrator":34}],36:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -5516,7 +5535,7 @@ var _physicsEngine = null;
 
 exports.PhysicsEngine = PhysicsEngine;
 
-},{"../collisions":25,"../integrator":32,"../util":38,"./physics-state":37,"lsl-animatex":1}],36:[function(require,module,exports){
+},{"../collisions":26,"../integrator":33,"../util":39,"./physics-state":38,"lsl-animatex":1}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5687,7 +5706,7 @@ exports.PhysicsJob = PhysicsJob;
  * @property {number} lowAngularMomentumSuppressionThreshold
  */
 
-},{"../util":38,"./physics-engine":35,"./physics-state":37,"lsl-animatex":1}],37:[function(require,module,exports){
+},{"../util":39,"./physics-engine":36,"./physics-state":38,"lsl-animatex":1}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5832,7 +5851,7 @@ exports.PhysicsState = PhysicsState;
  * @property {mat3} [unrotatedInertiaTensor]
  */
 
-},{"../util":38}],38:[function(require,module,exports){
+},{"../util":39}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5887,7 +5906,7 @@ Object.keys(_util).forEach(function (key) {
   });
 });
 
-},{"./src/force-utils":39,"./src/geometry":40,"./src/inertia-tensor-utils":41,"./src/util":42}],39:[function(require,module,exports){
+},{"./src/force-utils":40,"./src/geometry":41,"./src/inertia-tensor-utils":42,"./src/util":43}],40:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5984,7 +6003,7 @@ exports.applySpringDamping = applySpringDamping;
  * @property {number} dampingCoefficient
  */
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6478,7 +6497,7 @@ exports.rotateTensor = rotateTensor;
 exports.aabbVsPoint = aabbVsPoint;
 exports.areVec3sClose = areVec3sClose;
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6723,7 +6742,7 @@ exports.createBoxInertiaTensor = createBoxInertiaTensor;
 exports.createCapsuleInertiaTensor = createCapsuleInertiaTensor;
 exports.createForCollidable = createForCollidable;
 
-},{"./geometry":40}],42:[function(require,module,exports){
+},{"./geometry":41}],43:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6742,6 +6761,6 @@ var _util = {
 
 exports._util = _util;
 
-},{}]},{},[31])
+},{}]},{},[32])
 
 //# sourceMappingURL=physx.js.map
