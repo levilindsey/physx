@@ -1,4 +1,4 @@
-import {animator} from '../../../animatex';
+import {animator} from 'lsl-animatex';
 import {PhysicsEngine} from './physics-engine';
 import {PhysicsState} from './physics-state';
 import {_util} from '../util';

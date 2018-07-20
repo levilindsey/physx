@@ -26,6 +26,5 @@ Thumbs.db
 .idea
 .sass-cache
 .tmp
-dist
 node_modules
 secure-config.js

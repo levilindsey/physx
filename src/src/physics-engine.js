@@ -1,4 +1,4 @@
-import {FrameLatencyProfiler, PersistentAnimationJob} from '../../../animatex';
+import {FrameLatencyProfiler, PersistentAnimationJob} from 'lsl-animatex';
 import {_util} from '../util';
 
 import {
