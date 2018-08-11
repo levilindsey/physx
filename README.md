@@ -2,13 +2,11 @@
 
 #### A physics engine with 3D rigid-body dynamics and collision detection (with impulse-based resolution).
 
-_See this in use at [levi.codes/dynamics-example][demo]!_
+_See this in use at [levi.codes/dynamics][demo]!_
 
-This framework only defines physics logic. If you also need a 3D rendering framework, checkout 
+This framework only defines physics logic. If you also need a 3D rendering framework, checkout
 [grafx][grafx]. Or checkout [gamex][gamex], a game engine that ties the grafx and physx frameworks
 together.
-
-TODO: Add some sort of getting set up and understanding the code docs.
 
 ## Notable Features
 
@@ -19,11 +17,11 @@ TODO: Add some sort of getting set up and understanding the code docs.
   reproducibility.
 - Suppresses linear and angular momenta below a certain threshold.
 
-The engine consists primarily of a collection of individual physics jobs and an update loop. This 
+The engine consists primarily of a collection of individual physics jobs and an update loop. This
 update loop is in turn controlled by the animation loop. However, whereas the animation loop renders
-each job once per frame loop--regardless of how much time actually elapsed since the previous
-frame--the physics loop updates its jobs at a constant rate. To reconcile these frame rates, the
-physics loop runs as many times as is needed in order to catch up to the time of the current
+each job once per frame loop&mdash;regardless of how much time actually elapsed since the previous
+frame&mdash;the physics loop updates its jobs at a constant rate. To reconcile these frame rates,
+the physics loop runs as many times as is needed in order to catch up to the time of the current
 animation frame. The physics frame rate should be much higher than the animation frame rate.
 
 It is _very important_ for a PhysicsJob to minimize the runtime of its update step.
@@ -68,7 +66,6 @@ The technologies used in this library include:
 - [Browserify][browserify]
 - [SASS][sass]
 - [animatex][animatex]
-- [lsl-gulp-tasks][lsl-gulp-tasks]
 - Numerous other packages that are available via [NPM][npm] (these are listed within the
   [`package.json`](./package.json) file)
 
@@ -79,16 +76,20 @@ Many online resources influenced the design of this library. Some of these inclu
 - [clb.demon.fi/MathGeoLib/nightly][mathgeolib]
 - [euclideanspace.com][euclideanspace]
 
+## Developing / Running the Code
+
+See [Getting Set Up](./docs/getting-set-up) or [Understanding the
+Code](./docs/understanding-the-code) for more info.
+
 ## License
 
 MIT
 
-[demo]: http://levi.codes/dynamics-example
+[demo]: http://levi.codes/dynamics
 
 [grafx]: https://github.com/levilindsey/grafx
 [gamex]: https://github.com/levilindsey/gamex
 [animatex]: https://github.com/levilindsey/animatex
-[lsl-gulp-tasks]: https://github.com/levilindsey/lsl-gulp-tasks
 
 [tunnelling-problem]: https://www.aorensoftware.com/blog/2011/06/01/when-bullets-move-too-fast/
 [sphere]: https://en.wikipedia.org/wiki/Sphere

@@ -1,51 +1,18 @@
 # Understanding the Code
 
-TODO
-
-### File Structure
-
-#### Top-Level Entries
-
-TODO
-
-##### `src/`
-
-This directory contains all of the front-end logic.
-
-##### `res/`
-
-This directory contains all of the media files used within this project.
-
-##### `dist/`
-
-This directory is not actually stored in the project repository. Instead, everything in `dist` is generated as part of 
-the build process. During the build process all previous contents of `dist` are deleted, so remember to **never make 
-changes directly to the contents of `dist`!**
-
-##### `gulp/`
-
-This directory contains all of the different gulp tasks. Each gulp task has been split apart into its own file.
-
-See the page on the [build system](./docs/build-system.md) for more information.
-
-##### `docs/`
-
-This directory holds these descriptive markdown files.
-
-#### Server-Side Entries
-
-TODO
-
-##### `src/server/config`
-
-###### `secure-config.js`
-
-Contains sensitive information (API keys, database credentials, cookie secrets, etc.) that should not be kept in a 
-public repository. This file is ignored by git, so you will need to manually transfer it around whenever you want to 
-set up a new development environment for this codebase. 
-
-TODO
-
-#### Front-End Entries
-
-TODO
+- `index.js`
+  - Re-exports all public values of the library.
+  - This is the main access point for consumers of this library via NPM.
+- `dist/`
+  - Everything in `dist` is generated as part of the build process.
+  - During the build process all previous contents of `dist` are deleted, so remember to **never
+    make changes directly to the contents of `dist`!**
+- `docs/`
+  - Descriptive markdown documentation.
+- `gulp/`
+  - All of the different gulp tasks. Each gulp task has been split apart into its own file.
+  - See the page on the [build system](./docs/build-system.md) for more information.
+- `res/`
+  - All of the media files used within this project.
+- `src/`
+  - All of the actual frontend logic for this library.

@@ -29,7 +29,7 @@ config.mainScriptSrc = `${config.publicPath}/index.js`;
 config.scriptsSrcBasePath = config.publicPath;
 config.shadersSrc = `${config.publicPath}/**/*.+(frag|vert|glsl|c)`;
 
-// TODO: these source arrays need to be manually kept up-to-date with the front-end libraries that are used in this app
+// TODO: these source arrays need to be manually kept up-to-date with the frontend libraries that are used in this app
 config.vendorScriptsSrc = [
   `${config.nodeModulesPath}/dat.gui/dat.gui.min.js`,
   `${config.nodeModulesPath}/gl-matrix/dist/gl-matrix-min.js`
