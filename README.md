@@ -2,6 +2,8 @@
 
 #### A physics engine with 3D rigid-body dynamics and collision detection (with impulse-based resolution).
 
+_DISCLAIMER: This has some rough edges and should probably not be used directly within production apps._
+
 _See this in use at [levi.codes/dynamics][demo]!_
 
 This framework only defines physics logic. If you also need a 3D rendering framework, checkout
