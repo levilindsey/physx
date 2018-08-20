@@ -29,7 +29,7 @@ It is _very important_ for a PhysicsJob to minimize the runtime of its update st
 ## Collision Detection
 
 This physics engine also includes a collision-detection pipeline. This will detect collisions
-between collidable bodies and update their momenta in response to the collisions.
+between collidable rigid bodies and update their momenta in response to the collisions.
 
 - Consists of an efficient broad-phase collision detection step followed by a precise narrow-phase
   step.
