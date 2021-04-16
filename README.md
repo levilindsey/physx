@@ -87,7 +87,7 @@ Code](./docs/understanding-the-code) for more info.
 
 MIT
 
-[demo]: http://levi.codes/dynamics
+[demo]: http://levi.dev/dynamics
 
 [grafx]: https://github.com/levilindsey/grafx
 [gamex]: https://github.com/levilindsey/gamex
