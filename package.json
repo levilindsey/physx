@@ -44,7 +44,7 @@
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
     "lsl-animatex": "^0.5.1",
-    "protractor": "^5.3.2",
+    "protractor": "^6.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
